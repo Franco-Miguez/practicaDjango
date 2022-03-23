@@ -1,5 +1,7 @@
+from multiprocessing import context
 from django.shortcuts import render
 from django.views.generic import View
+from .forms import PostCreateForm
 
 # Create your views here.
 class BlogViewsList(View):
@@ -8,3 +10,15 @@ class BlogViewsList(View):
 
         }
         return render(request, 'blog_list.html', context)
+
+class BlogCreateView(View):
+    def get(self, request, *arg, **kwarg):
+        context = {
+
+        }
+        return render(request, 'blog_create.html', context)
+    def post(self, request, *arg, **kwarg):
+        context = {
+
+        }
+        return render(request, 'blog_create.html', context)
