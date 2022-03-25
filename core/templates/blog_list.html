@@ -5,8 +5,12 @@
     <title>Blog</title>
 </head>
 <body>
-    <p>Blog List</p>
+    <h1>Blog List</h1>
     <br>
-    <a href="{% url 'blog:create' %}"">Create</a>
+    <p>blog <a href="{% url 'blog:create' %}">Create</a></p>
+    <br>
+    {% for post in posts %}
+        <p>{{post.title}}</p>
+    {% endfor %}
 </body>
 </html>

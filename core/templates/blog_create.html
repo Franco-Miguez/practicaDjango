@@ -6,5 +6,15 @@
 </head>
 <body>
     <h1>Blog Create</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p>Title</p>
+        {{form.title}}
+        <br>
+        <p>Contenido</p>
+        {{form.content}}
+        <br>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
